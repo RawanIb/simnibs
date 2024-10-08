@@ -30,6 +30,25 @@ python -m pip install --editable .
 python simnibs/cli/link_external_progs.py
 ```
 
+
+### Rawan Installation Guide
+If above didnt work, try the following:
+```
+conda env create -f "environment_win.yml"
+conda activate simnibs_env
+pip install -f https://github.com/simnibs/simnibs/releases/latest simnibs
+```
+
+If this not working use, download the `.whl` file then:
+```
+pip install simnibs-4.1.0-cp39-cp39-win_amd64.whl --user
+```
+If loop module import raise error, try to delete `simnibs\__init__.py` file.
+
+> #### Example dataset
+> Example dataset can be downloaded from the [following link](https://simnibs.github.io/simnibs/build/html/dataset.html):
+> https://github.com/simnibs/example-dataset/releases/latest/download/simnibs4_examples.zip
+ 
 > **NOTE**
 >
 > Currently on arm64 Macs it is only possible to build by creating an x86_64 environment. To do so, replace the first command above with:
