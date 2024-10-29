@@ -168,8 +168,6 @@ def run_electrode_simulation(electrode_config, subject_path, results_path, elec1
 def main():
     results_path.mkdir(exist_ok=True)
 
-
-
     # Run simulations for all electrode configurations
     for config in electrodes_properties:
         try:
