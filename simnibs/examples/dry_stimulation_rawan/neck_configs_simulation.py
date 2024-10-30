@@ -103,13 +103,11 @@ def create_simulation_session(subject_path, simulation_name):
         s: Conductivity at the elements
         D: dA/dt at the nodes
         g: gradiet of the potential at the elements
-
-        J: Current density vector
     """
     S = sim_struct.SESSION()
     S.subpath = subject_path
     S.pathfem = simulation_name
-    S.fields = 'veEjJsg'
+    S.fields = 'veEjJsDg'
     S.map_to_surf = False  # Map to subject's middle gray matter surface
     S.open_in_gmsh = False  # show results in gmsh (not for the the niftis)
     S.map_to_fsavg = False
